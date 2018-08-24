@@ -1,0 +1,72 @@
+1. What class is at the top of the exception hierarchy?
+Throwable
+
+2. Briefly explain how to use try and catch.
+try block contains code that can potentially throw an exception which is then catched within the catch box. Both try and catch blocks need to exist with each other.
+
+3. What is wrong with this fragment?
+    // ...
+    vals[18] = 10;
+    catch (ArrayIndexOutOfBOundsException exc) {
+        // handle error
+    }    
+There is not a try block that encloses the statement generating the exception.
+
+4. What happens if an exception is not caught?
+The exception will be handled by the JVM by returning a trace of the stack as well as toString and terminating your program.
+
+5. What is wrong with this fragment?
+    class A extends Exception { ... }
+    class B extends A { ... }
+
+    // ...
+    
+    try {
+        // ...
+    }
+    catch (A exc) { ... }
+    catch (B exc) { ... }
+A is a superclass of B so B is unreachable code because all exceptions of B will be catched by the A catch block.
+
+6. Can an inner catch rethrow an exception to an outer catch?
+Yes
+
+7. The finally block is the last bit of code executed before your program ends. True or False?
+False.  The finally block executes after a try catch block has ended no matter what occurs in the try catch block.
+
+8. What type of exceptions must be explicitly declared in a throws clause of a method?
+Every exception except Errors and RunTimeExceptions.
+
+9. What is wrong with this fragment?
+    class MyClass { //... }
+    // ...
+    throw new MyClass();
+MyClass does not extend Throwable or any of Throwable's subclasses
+
+10. In question 3 of the Chapter 6 SElf Test, you created a Stack class. Add custom exceptions to your class that report stack full and stack empty conditions.
+public class StackFullException throws Exception {
+    int size;
+    stackFullException(int i) {
+        size = i;
+    }
+    void toString() {
+        System.out.println("Stack maximum " + size + " has been reached");
+    }
+}
+public class StackEmptyException throws Exception {
+    void toString() {
+        System.out.println("Stack is empty");
+    }
+}
+
+11. What are the three ways that an exception can be generated?
+Error in JVM which you can't do anything about, error generated in program, or explicitly thrown by a throws statement.
+
+12. What are the two direct subclasses of Throwable?
+Exception and Error
+
+13. What is the multi-catch feature?
+one catch block can catch multiple Exceptions and execute the same code.  Each exception is seperated by an OR operator |.
+
+14. Should your code typically catch exceptions of type Error?
+No

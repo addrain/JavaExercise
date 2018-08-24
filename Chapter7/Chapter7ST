@@ -1,0 +1,36 @@
+1. Does a superclass have access to the members of a subclass? Does a subclass have access to the members of a superclass?
+    No, yes
+2. Create a subclass of TwoDShape called Circle. Include an area() method that computes the area of the circle and a constructor that uses ssuper to initialize the TwoDShape portion.
+    class Circle extends TwoDShape {
+        Circle(int i, int j) {
+            super(i, j);
+        }
+        double area(){
+            return <area> //area formula for a circle
+        }
+    }
+3. How do you preven a subclass from having access to a member of a superclass?
+    using private access modifier
+4. Describe the purpose and use of the two versions of super dsecribed in this chapter
+    super(<parameters>) is used to access the superclass's constructor.
+    super.<method> is used to use a method in the superclass that was overridden in the subclass
+5. Given teh following hierarchy:
+    class Alpha { ... }
+    class Beta extends Alpha { ... }
+    class Gamma extends Beta { ... }
+   In what order do teh constructors for these classees complete their execution when a Gamma object is instantiated?
+   Alpha > Beta > Gamma
+6. A superclass reference can refer to a subclass object. Explain why this is important as it relates to method overriding.
+    A superclass can refer to a subclass object along with referring the the subclass's methods and the subclass's overriding methods
+7. What is an abstract class?
+    A class with one or more abstract methods.  They are incomplete classes that depend on the subclass to complete the abstract method.
+8. How do you prevent a method from being overridden? How do you prevent a class from being inherited?
+    Use final before the method or use final before the class
+9. Explain how inheritance, method overriding, and abstract classes are used to support polymorphism.
+    Inheritance, overriding, and abstract classes are used to support polymorphism by being able to implement once and use many different ways.
+10. What class is as superclass of every other class?
+    The Object class
+11. A class that contains a tleast one abstract method must, itself , be declared abstract. True/False?
+    TRUE
+12. What keyword is used to create a named constant?
+    final

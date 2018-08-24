@@ -1,0 +1,90 @@
+1.  Given this fragment,
+        class X {
+            private in count;
+        }
+    is the following fragement correct?
+        class Y {
+            public static void main(String args[]) {
+                X ob = new X90;
+
+                ob.count = 10;
+            }
+        }
+NO
+
+2. An access modifier must <answer> a member's declaration.
+precede
+
+3. The complement of a queue is a stack.  Create a Stack that can hold characters.  Call methods that access the stack push() and pop().  
+Allow the user to specify the size of the stack when it is created.  Keep all other members of the Stack class private.
+
+Check out: Stack.java
+
+4.  Given this class,
+        class Test {
+            int a;
+            Test (int i) { a = i; )}
+        }
+    write a method called swap() that exhanges the contents of the objects referred to by two Test object references.
+        void swap(Test one, Test two) {
+            int temp;
+
+            temp = one.a;
+            one.a = two.a;
+            two.a = temp;
+        }
+
+5.  Is the following fragment correct?
+        class X {
+            int meth(int a, int b) { ... }
+            String meth(int a, int b) { ... }
+        }
+    No, need different parameters, not return values (though return values can be different) for over loading.
+
+6. Write a recursive method that displays the contents of a string backwards;
+    class Rec {
+        static void printBack(String str){
+            printBackH(str, str.length()-1);
+        }
+        static private void printBackH(String str, int len) {
+            if(len >= 0) {
+                System.out.print(str.charAt(len));
+                printBackH(str, len-1);
+            } else {
+                return;
+            }
+        }
+    }
+
+7. If all objects of a class need to share the same variable, how must you declare thatt variable?
+    with "static" preceding the variable type.
+
+8. Why might you need to use a static block?
+    If an action is desired on static variables even if an object is not created.
+
+9. What is an inner class?
+    an inner class is inside an outer class and can work on variables defined in the outer class, however the outer class cannot work on variables defined in the inner class.
+
+10. To make a member accessible by ony other members of its class, what access modifier must be used?
+    private
+
+11. The name of a method plus its parameter list constitutes the method's <answer>.
+    SIGNATURE
+
+12. An int argument is passed to a method by using call-by-<answer>
+    value
+
+13. Create a vararges method called sum() that sums teh int values passed to it. Have it return the result. Demonstrate its use.
+    int sum(int ... v) {
+        int result = 0;
+        for(int x : v) result += v;
+        return result;
+    }
+
+14. Can a varargs method be overloarded?
+    Yes but there might be ambiguity.
+
+15. Show an example of an overlaoded varargs method that is ambiguous.
+
+    int meth(int i, int ... v) { ... }
+    int meth(int ... v) { ... }

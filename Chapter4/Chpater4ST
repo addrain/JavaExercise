@@ -1,0 +1,38 @@
+1. What is t he difference between a class and an object?
+    A class is like a blueprint to create an object.  A class doesn't become an object until it is created. 
+
+2. How is a class defined?
+    class ClassName {}
+
+3. What does each object have its own copy of?
+    Each object, at creation, creates a it's own copy of its instance variables.
+
+4. Using two separate statements, show how to declare an object called counter of a class called MyCounter.
+    MyCounter counter = new MyCounter();
+
+    MyCounter counter;
+    counter = new MyCounter();
+
+5. Show how a method called myMeth() is declared if it has a return type of double and has two int parameters called a and b.
+    double myMeth(int a, int b){};
+
+6. How must a method return if it returns a value?
+    By using return data;
+
+7. What name does a constructor have?
+    The same name as the class;
+
+8. What does new do?
+    new is java's default constructor when no constructor is written. It also allocates memory for the new object and initializes it using the class constructor if there is one.
+
+9. What is garbage collection, and how does it work?
+    Garbage collection frees up memory that is deemed as no longer needed because it is no longer referenced.  It only happens when it needs to be done and when it can be done since it's costly to do.
+
+10. What is this?
+    When a class's instance variable and local variable are the same, the compiler doesn't know what to reference.  The this allows the compiler to know to work with the instance variable.
+
+11. Can a constructor have one or more-parameters?
+    Yes
+
+12.  If a method returns no value, what must its return type be?
+    void

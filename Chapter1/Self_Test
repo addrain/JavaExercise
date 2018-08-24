@@ -1,0 +1,51 @@
+1. Bytecode is the output of compiled java code.  It is not executable code.  It is turned into executable code using the JVM.
+2. Polymorphism - Same type of object but holds different values,
+    Encapsulation - the scope of accessebility confined to the program or set of programs making up a black box,
+    Inheritance - taking methods or characteristics from more general parent classes into child classes.
+3. main()
+4. A variable references data.  They are identifires to what they point to.
+5. D. 67count is not a valid variable.
+6. // single line comment
+    /*
+        multi-line comment
+    */
+7. if(condition)
+    for(start value; stop condition; increment)
+8. Curly brackets define a block of code
+9.
+/*
+    The moon's gravity is about 17 percent that of earth's. Write a program that computes your effective weight on the moon.
+*/
+class MoonWeight {
+    public static void main (String args[]) {
+        double pounds, moonPounds;
+
+        pounds = 200;
+
+        moonPounds = pounds * 0.17;
+
+        System.out.println(pounds + " pounds is " + moonPounds + " pounds on the moon");
+    }
+}
+10.
+/*
+    Display 12 feet of conversion, inch by inch. Output a blank line every 12 inches. (one meter equals approximately 39.37 inches.)
+*/
+class inchToMeters {
+    public static void main (String args[]) {
+        double inches, meters;
+        int counter;
+
+        for(inches = 1; inches <= 12*12; inches++) {
+            meters = inches / 39.37;
+            System.out.println(inches + " inches is " + meters + " meters.");
+
+            counter++;
+            if(counter % 12 == 0){
+                System.out.println();
+            }
+        }
+    }
+}
+11. Syntax Error - error happens through syntax ie, no semi-colon to end a statement or no ending bracked to end a block.
+12. To compile no, but it is conventional to put lines in specific spots for readability purposes.
